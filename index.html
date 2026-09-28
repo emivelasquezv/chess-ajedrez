@@ -1,1 +1,386 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVzIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8c2NyaXB0PgooZnVuY3Rpb24gKCkgewogIHRyeSB7CiAgICB2YXIgc3RvcmVkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3RoZW1lJyk7CiAgICB2YXIgdGhlbWUgPSBzdG9yZWQgfHwgKHdpbmRvdy5tYXRjaE1lZGlhKCcocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspJykubWF0Y2hlcyA/ICdkYXJrJyA6ICdsaWdodCcpOwogICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNldEF0dHJpYnV0ZSgnZGF0YS10aGVtZScsIHRoZW1lKTsKICB9IGNhdGNoIChlKSB7fQp9KSgpOwo8L3NjcmlwdD4KPHRpdGxlPkNIRVNTIOKAlCBDbGFzZXMgZGUgYWplZHJleiBvbmxpbmU8L3RpdGxlPgo8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iQ2xhc2VzIHBhcnRpY3VsYXJlcyB5IGdydXBhbGVzIGRlIGFqZWRyZXogb25saW5lIHBhcmEgbmnDsW9zLCBhZG9sZXNjZW50ZXMgeSBwZXJzb25hcyBtYXlvcmVzLiBBcHJlbmRlIGEgdHUgcml0bW8sIGRlc2RlIGN1YWxxdWllciBsdWdhci4iPgo8bGluayByZWw9InByZWNvbm5lY3QiIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20iPgo8bGluayByZWw9InByZWNvbm5lY3QiIGhyZWY9Imh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20iIGNyb3Nzb3JpZ2luPgo8bGluayBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUdlb21pbmk6d2doQDQwMC4uNzAwJmRpc3BsYXk9c3dhcCIgcmVsPSJzdHlsZXNoZWV0Ij4KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJjc3Mvc3R5bGVzLmNzcyI+CjxsaW5rIHJlbD0iaWNvbiIgdHlwZT0iaW1hZ2Uvc3ZnK3htbCIgaHJlZj0iYXNzZXRzL2Zhdmljb24uc3ZnIj4KPC9oZWFkPgo8Ym9keT4KCjxkaXYgY2xhc3M9InNjcm9sbC1wcm9ncmVzcyIgaWQ9InNjcm9sbFByb2dyZXNzIj48L2Rpdj4KCjxoZWFkZXIgY2xhc3M9ImhlYWRlciIgaWQ9ImhlYWRlciI+CiAgPGRpdiBjbGFzcz0iY29udGFpbmVyIGhlYWRlcl9faW5uZXIiPgogICAgPGEgaHJlZj0iI2luaWNpbyIgY2xhc3M9ImxvZ28iPgogICAgICA8c3ZnIGNsYXNzPSJsb2dvX19pY29uIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIj4KICAgICAgICA8cGF0aCBkPSJNNS41IDkuNUw5IDJMOS44IDkuNVoiLz4KICAgICAgICA8cGF0aCBkPSJNMTguNSA5LjVMMTUgMkwxNC4yIDkuNVoiLz4KICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEwLjUiIHI9IjUuMiIvPgogICAgICAgIDxyZWN0IHg9IjguNyIgeT0iMTMuNSIgd2lkdGg9IjYuNiIgaGVpZ2h0PSI1LjUiIHJ4PSIzIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iOS43IiBjeT0iOS44IiByPSIwLjgiIGZpbGw9ImN1cnJlbnRDb2xvciIgc3Ryb2tlPSJub25lIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMTQuMyIgY3k9IjkuOCIgcj0iMC44IiBmaWxsPSJjdXJyZW50Q29sb3IiIHN0cm9rZT0ibm9uZSIvPgogICAgICAgIDxlbGxpcHNlIGN4PSIxMiIgY3k9IjE3LjMiIHJ4PSIwLjkiIHJ5PSIwLjciIGZpbGw9ImN1cnJlbnRDb2xvciIgc3Ryb2tlPSJub25lIi8+CiAgICAgIDwvc3ZnPgogICAgICA8c3Bhbj5DSEVTUzwvc3Bhbj4KICAgIDwvYT4KICAgIDxuYXYgY2xhc3M9Im5hdiIgaWQ9Im5hdiI+CiAgICAgIDxhIGhyZWY9IiNwYXJhLXF1aWVuIj5QYXJhIHF1acOpbjwvYT4KICAgICAgPGEgaHJlZj0iI2NsYXNlcyI+Q2xhc2VzPC9hPgogICAgICA8YSBocmVmPSIjcHJlY2lvcyI+UHJlY2lvczwvYT4KICAgICAgPGEgaHJlZj0iI3NvYnJlLW1pIj5Tb2JyZSBtw608L2E+CiAgICAgIDxhIGhyZWY9IiNmYXEiPkZBUTwvYT4KICAgIDwvbmF2PgogICAgPGJ1dHRvbiBjbGFzcz0idGhlbWUtdG9nZ2xlIiBpZD0idGhlbWVUb2dnbGUiIHR5cGU9ImJ1dHRvbiIgYXJpYS1sYWJlbD0iQ2FtYmlhciBlbnRyZSBtb2RvIGNsYXJvIHkgb3NjdXJvIj4KICAgICAgPHN2ZyBjbGFzcz0idGhlbWUtdG9nZ2xlX19pY29uIGljb24tc3VuIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1oaWRkZW49InRydWUiPgogICAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQuMiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgICAgICAgPGcgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgICAgICAgPGxpbmUgeDE9IjEyIiB5MT0iMS41IiB4Mj0iMTIiIHkyPSI0Ii8+CiAgICAgICAgICA8bGluZSB4MT0iMTIiIHkxPSIyMCIgeDI9IjEyIiB5Mj0iMjIuNSIvPgogICAgICAgICAgPGxpbmUgeDE9IjEuNSIgeTE9IjEyIiB4Mj0iNCIgeTI9IjEyIi8+CiAgICAgICAgICA8bGluZSB4MT0iMjAiIHkxPSIxMiIgeDI9IjIyLjUiIHkyPSIxMiIvPgogICAgICAgICAgPGxpbmUgeDE9IjQuMiIgeTE9IjQuMiIgeDI9IjYiIHkyPSI2Ii8+CiAgICAgICAgICA8bGluZSB4MT0iMTgiIHkxPSIxOCIgeDI9IjE5LjgiIHkyPSIxOS44Ii8+CiAgICAgICAgICA8bGluZSB4MT0iNC4yIiB5MT0iMTkuOCIgeDI9IjYiIHkyPSIxOCIvPgogICAgICAgICAgPGxpbmUgeDE9IjE4IiB5MT0iNiIgeDI9IjE5LjgiIHkyPSI0LjIiLz4KICAgICAgICA8L2c+CiAgICAgIDwvc3ZnPgogICAgICA8c3ZnIGNsYXNzPSJ0aGVtZS10b2dnbGVfX2ljb24gaWNvbi1tb29uIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1oaWRkZW49InRydWUiPgogICAgICAgIDxwYXRoIGQ9Ik0yMCAxNC41QTguNSA4LjUgMCAxIDEgOS41IDRhNyA3IDAgMCAwIDEwLjUgMTAuNXoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogICAgICA8L3N2Zz4KICAgIDwvYnV0dG9uPgogICAgPGEgaHJlZj0iI2NvbnRhY3RvIiBjbGFzcz0iYnRuIGJ0bi0tcHJpbWFyeSBidG4tLW5hdiI+UmVzZXJ2YSB0dSBjbGFzZTwvYT4KICAgIDxidXR0b24gY2xhc3M9Im5hdi10b2dnbGUiIGlkPSJuYXZUb2dnbGUiIGFyaWEtbGFiZWw9IkFicmlyIG1lbsO6IiBhcmlhLWV4cGFuZGVkPSJmYWxzZSI+CiAgICAgIDxzcGFuPjwvc3Bhbj48c3Bhbj48L3NwYW4+PHNwYW4+PC9zcGFuPgogICAgPC9idXR0b24+CiAgPC9kaXY+CjwvaGVhZGVyPgoKPG1haW4+CgogIDwhLS0gSEVSTyAtLT4KICA8c2VjdGlvbiBjbGFzcz0iaGVybyIgaWQ9ImluaWNpbyI+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgaGVyb19faW5uZXIiPgogICAgICA8ZGl2IGNsYXNzPSJoZXJvX190ZXh0Ij4KICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+Q2xhc2VzIGRlIGFqZWRyZXogMTAwJSBvbmxpbmU8L3A+CiAgICAgICAgPGgxIGFyaWEtbGFiZWw9IkFwcmVuZGUgYWplZHJleiBhIHR1IHJpdG1vLCBzZWEgY3VhbCBzZWEgdHUgZWRhZCI+PHNwYW4gY2xhc3M9InR5cGluZy10ZXh0IiBpZD0idHlwaW5nSGVhZGxpbmUiIGRhdGEtdGV4dD0iQXByZW5kZSBhamVkcmV6IGEgdHUgcml0bW8sIHNlYSBjdWFsIHNlYSB0dSBlZGFkIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJ0eXBpbmctY3Vyc29yIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PC9zcGFuPjwvaDE+CiAgICAgICAgPHAgY2xhc3M9Imhlcm9fX3N1YnRpdGxlIj5DbGFzZXMgcGFydGljdWxhcmVzIHkgZ3J1cGFsZXMgcGFyYSBuacOxb3MsIGFkb2xlc2NlbnRlcyB5IHBlcnNvbmFzIG1heW9yZXMuIFNpbiBkZXNwbGF6YW1pZW50b3MsIGNvbiB1biBwbGFuIHBlbnNhZG8gcGFyYSBjYWRhIGFsdW1uby48L3A+CiAgICAgICAgPGRpdiBjbGFzcz0iaGVyb19fYWN0aW9ucyI+CiAgICAgICAgICA8YSBocmVmPSIjY29udGFjdG8iIGNsYXNzPSJidG4gYnRuLS1wcmltYXJ5IGJ0bi0tbGciPlJlc2VydmEgdHUgcHJpbWVyYSBjbGFzZTwvYT4KICAgICAgICAgIDxhIGhyZWY9IiNjbGFzZXMiIGNsYXNzPSJidG4gYnRuLS10ZXh0Ij5WZXIgY8OzbW8gZnVuY2lvbmFuIGxhcyBjbGFzZXMg4oaTPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iaGVyb19fdmlzdWFsIj4KICAgICAgICA8ZGl2IGNsYXNzPSJib2FyZCIgaWQ9ImJvYXJkIiB0YWJpbmRleD0iMCIgcm9sZT0iYnV0dG9uIiBhcmlhLWxhYmVsPSJUYWJsZXJvIGRlIGFqZWRyZXogaW50ZXJhY3Rpdm8sIHRvY2EgcGFyYSBtb3ZlciBsYSBwaWV6YSI+CiAgICAgICAgICA8c3ZnIGNsYXNzPSJib2FyZF9fcGllY2UiIGlkPSJib2FyZFBpZWNlIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1oaWRkZW49InRydWUiPgogICAgICAgICAgICA8cGF0aCBkPSJNMTIgMmwxLjggMy42TDE4IDZsLTIuMiAzLjJMMTcgMTNIN2wxLjItMy44TDYgNmw0LjItLjRMMTIgMnoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgogICAgICAgICAgICA8cGF0aCBkPSJNNiAyMmwxLjMtNi41aDkuNEwxOCAyMkg2eiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgICAgICAgICA8L3N2Zz4KICAgICAgICA8L2Rpdj4KICAgICAgICA8cCBjbGFzcz0iYm9hcmRfX2hpbnQiPlRvY2EgZWwgdGFibGVybyBwYXJhIG1vdmVyIGxhIHBpZXphIOKZnzwvcD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L3NlY3Rpb24+CgogIDwhLS0gVFJVU1QgU1RSSVAgLS0+CiAgPHNlY3Rpb24gY2xhc3M9InRydXN0Ij4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciB0cnVzdF9faW5uZXIiPgogICAgICA8ZGl2IGNsYXNzPSJ0cnVzdF9faXRlbSI+PHN0cm9uZz48c3BhbiBjbGFzcz0ibnVtYmVyLXRpY2tlciIgZGF0YS10YXJnZXQ9Ijc1IiBkYXRhLXByZWZpeD0iNuKAkyIgZGF0YS1zdWZmaXg9IisiPjbigJMwKzwvc3Bhbj48L3N0cm9uZz48c3Bhbj5hw7FvcyBkZSBudWVzdHJvcyBhbHVtbm9zPC9zcGFuPjwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJ0cnVzdF9faXRlbSI+PHN0cm9uZz4xIGEgMSBvIGVuIGdydXBvPC9zdHJvbmc+PHNwYW4+Y2xhc2VzIGFkYXB0YWRhcyBhIGNhZGEgbml2ZWw8L3NwYW4+PC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InRydXN0X19pdGVtIj48c3Ryb25nPjxzcGFuIGNsYXNzPSJudW1iZXItdGlja2VyIiBkYXRhLXRhcmdldD0iMTAwIiBkYXRhLXN1ZmZpeD0iJSBvbmxpbmUiPjAlIG9ubGluZTwvc3Bhbj48L3N0cm9uZz48c3Bhbj5kZXNkZSBjdWFscXVpZXIgbHVnYXI8L3NwYW4+PC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InRydXN0X19pdGVtIj48c3Ryb25nPlRvZG9zIGxvcyBuaXZlbGVzPC9zdHJvbmc+PHNwYW4+ZGVzZGUgY2VybyBoYXN0YSBjb21wZXRpY2nDs248L3NwYW4+PC9kaXY+CiAgICA8L2Rpdj4KICA8L3NlY3Rpb24+CgogIDwhLS0gUEFSQSBRVUnDiE4gLS0+CiAgPHNlY3Rpb24gY2xhc3M9InNlY3Rpb24iIGlkPSJwYXJhLXF1aWVuIj4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgIDxwIGNsYXNzPSJleWVicm93Ij5QYXJhIHF1acOpbjwvcD4KICAgICAgPGgyPlVuIHBsYW4gZGUgYWplZHJleiBwYXJhIGNhZGEgYWx1bW5vPC9oMj4KICAgICAgPGRpdiBjbGFzcz0iY2FyZHMgY2FyZHMtLWJlbnRvIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIGNhcmQtLWJlbnRvLWZlYXR1cmVkIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmRfX2ljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj7imJ88L2Rpdj4KICAgICAgICAgIDxoMz5OacOxb3M8L2gzPgogICAgICAgICAgPHA+SW50cm9kdWNjacOzbiBhbCBhamVkcmV6IGNvbiBqdWVnb3MsIHJldG9zIHkgbXVjaGEgcGFjaWVuY2lhLiBUcmFiYWphbW9zIGNvbmNlbnRyYWNpw7NuLCBjw6FsY3VsbyB5IHBhY2llbmNpYSBtaWVudHJhcyBzZSBkaXZpZXJ0ZW4uPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZF9faWNvbiIgYXJpYS1oaWRkZW49InRydWUiPuKZnjwvZGl2PgogICAgICAgICAgPGgzPkFkb2xlc2NlbnRlczwvaDM+CiAgICAgICAgICA8cD5QZXJmZWNjaW9uYW1pZW50byB0w6ljbmljbywgcHJlcGFyYWNpw7NuIHBhcmEgdG9ybmVvcyB5IGRlc2Fycm9sbG8gZGUgcGVuc2FtaWVudG8gZXN0cmF0w6lnaWNvLCBhIHVuIHJpdG1vIGV4aWdlbnRlIHBlcm8gY2VyY2Fuby48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0iY2FyZCI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkX19pY29uIiBhcmlhLWhpZGRlbj0idHJ1ZSI+4pmaPC9kaXY+CiAgICAgICAgICA8aDM+UGVyc29uYXMgbWF5b3JlczwvaDM+CiAgICAgICAgICA8cD5DbGFzZXMgdHJhbnF1aWxhcyB5IHNpbiBwcmlzYSwgaWRlYWxlcyBwYXJhIG1hbnRlbmVyIGxhIG1lbnRlIGFjdGl2YSwgc29jaWFsaXphciB5IGRpc2ZydXRhciBkZWwganVlZ28gc2luIHByZXNpw7NuLjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L3NlY3Rpb24+CgogIDwhLS0gQ8OTTU8gU09OIExBUyBDTEFTRVMgLS0+CiAgPHNlY3Rpb24gY2xhc3M9InNlY3Rpb24gc2VjdGlvbi0tbXV0ZWQiIGlkPSJjbGFzZXMiPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPkPDs21vIGZ1bmNpb25hbjwvcD4KICAgICAgPGgyPkNsYXNlcyBvbmxpbmUsIHNpbXBsZXMgZGUgc2VndWlyPC9oMj4KICAgICAgPGRpdiBjbGFzcz0ic3RlcHMiPgogICAgICAgIDxkaXYgY2xhc3M9InN0ZXAiPgogICAgICAgICAgPHNwYW4gY2xhc3M9InN0ZXBfX251bWJlciI+MTwvc3Bhbj4KICAgICAgICAgIDxoMz5SZXNlcnZhbW9zIHR1IGhvcmFyaW88L2gzPgogICAgICAgICAgPHA+RWxpZ2VzIGVsIGTDrWEgeSBsYSBob3JhIHF1ZSBtZWpvciB0ZSBlbmNhamUsIHNlZ8O6biBkaXNwb25pYmlsaWRhZCwgcG9yIHZpZGVvbGxhbWFkYSAoWm9vbSwgTWVldCBvIHNpbWlsYXIpLjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGVwIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJzdGVwX19udW1iZXIiPjI8L3NwYW4+CiAgICAgICAgICA8aDM+Q2xhc2UgZW4gZGlyZWN0bzwvaDM+CiAgICAgICAgICA8cD5Vc2Ftb3MgdW4gdGFibGVybyBkaWdpdGFsIGNvbXBhcnRpZG86IHTDuiB2ZXMgeSBtdWV2ZXMgbGFzIHBpZXphcyBpZ3VhbCBxdWUgZW4gdW4gdGFibGVybyByZWFsLCBzaW4gbmVjZXNpZGFkIGRlIGluc3RhbGFyIG5hZGEgY29tcGxpY2Fkby48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ic3RlcCI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic3RlcF9fbnVtYmVyIj4zPC9zcGFuPgogICAgICAgICAgPGgzPlByw6FjdGljYSB5IHNlZ3VpbWllbnRvPC9oMz4KICAgICAgICAgIDxwPkFsIGZpbmFsIGRlIGNhZGEgY2xhc2UgdGUgbGxldmFzIGVqZXJjaWNpb3MgeSBwYXJ0aWRhcyBwYXJhIHByYWN0aWNhciwgeSBsbGV2YW1vcyB1biBzZWd1aW1pZW50byBkZSB0dSBwcm9ncmVzby48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJtb2RhbGlkYWRlcyI+CiAgICAgICAgPGRpdiBjbGFzcz0ibW9kYWxpZGFkLWNhcmQiPgogICAgICAgICAgPGgzPkNsYXNlcyBpbmRpdmlkdWFsZXM8L2gzPgogICAgICAgICAgPHA+QXRlbmNpw7NuIDEwMCUgcGVyc29uYWxpemFkYS4gSWRlYWwgcGFyYSBhdmFuemFyIHLDoXBpZG8gbyBwcmVwYXJhciB0b3JuZW9zIGNvbmNyZXRvcy48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ibW9kYWxpZGFkLWNhcmQiPgogICAgICAgICAgPGgzPkNsYXNlcyBncnVwYWxlczwvaDM+CiAgICAgICAgICA8cD5HcnVwb3MgcmVkdWNpZG9zICgzw6HigJM2IGFsdW1ub3MpIGRlIG5pdmVsIHNpbWlsYXIuIE1pc21vIG5pdmVsIGRlIGF0ZW5jacOzbiwgY29uIGVsIHBsdXMgZGUgYXByZW5kZXIgZW4gY29tcGHDsW/DrWEuPC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPCEtLSBQUkVDSU9TIC0tPgogIDxzZWN0aW9uIGNsYXNzPSJzZWN0aW9uIiBpZD0icHJlY2lvcyI+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICA8cCBjbGFzcz0iZXllYnJvdyI+UHJlY2lvczwvcD4KICAgICAgPGgyPlRhcmlmYXMgeSBwbGFuZXM8L2gyPgogICAgICA8cCBjbGFzcz0ic2VjdGlvbl9faW50cm8iPlByZWNpb3MgZmlqb3MgeSBzaW4gc29ycHJlc2FzLiBFbGlnZSBsYSBkdXJhY2nDs24gcXVlIG1lam9yIHRlIGVuY2FqZS48L3A+CiAgICAgIDxkaXYgY2xhc3M9ImNhcmRzIGNhcmRzLS0zIGNhcmRzLS1wcmljaW5nIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIGNhcmQtLXByaWNpbmciIGRhdGEtcHJpY2luZy1jYXJkPgogICAgICAgICAgPGgzPkNsYXNlIGluZGl2aWR1YWw8L2gzPgogICAgICAgICAgPHNlbGVjdCBjbGFzcz0iZHVyYXRpb24tc2VsZWN0IiBhcmlhLWxhYmVsPSJEdXJhY2nDs24gZGUgbGEgY2xhc2UgaW5kaXZpZHVhbCI+CiAgICAgICAgICAgIDxvcHRpb24gZGF0YS1wcmljZT0iMjAiIGRhdGEtZHVyYXRpb249IjQ1IG1pbiIgZGF0YS1saW5rPSJodHRwczovL2J1eS5zdHJpcGUuY29tL2JKZWFFUjd5TzY3MjhMbjlZNDZOYTAwIj40NSBtaW48L29wdGlvbj4KICAgICAgICAgICAgPG9wdGlvbiBkYXRhLXByaWNlPSIyNSIgZGF0YS1kdXJhdGlvbj0iNjAgbWluIiBkYXRhLWxpbms9Imh0dHBzOi8vYnV5LnN0cmlwZS5jb20vMTRBNWt4NXFHY3ZxMGVSYzZjNk5hMDEiIHNlbGVjdGVkPjYwIG1pbjwvb3B0aW9uPgogICAgICAgICAgICA8b3B0aW9uIGRhdGEtcHJpY2U9IjM1IiBkYXRhLWR1cmF0aW9uPSI5MCBtaW4iIGRhdGEtbGluaz0iaHR0cHM6Ly9idXkuc3RyaXBlLmNvbS84eDIyOGxhTDAzWVU5UHI0REs2TmEwMiI+OTAgbWluPC9vcHRpb24+CiAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICAgIDxwIGNsYXNzPSJwcmljZSI+PHNwYW4gY2xhc3M9InByaWNlX19hbW91bnQiPjI14oKsPC9zcGFuPiA8c3BhbiBjbGFzcz0icHJpY2VfX3VuaXQiPi8gY2xhc2UgKDYwIG1pbik8L3NwYW4+PC9wPgogICAgICAgICAgPHVsIGNsYXNzPSJwcmljZS1saXN0Ij4KICAgICAgICAgICAgPGxpPkF0ZW5jacOzbiAxMDAlIHBlcnNvbmFsaXphZGE8L2xpPgogICAgICAgICAgICA8bGk+TWF0ZXJpYWwgeSBlamVyY2ljaW9zIGluY2x1aWRvczwvbGk+CiAgICAgICAgICAgIDxsaT5Ib3JhcmlvIGZsZXhpYmxlPC9saT4KICAgICAgICAgIDwvdWw+CiAgICAgICAgICA8YSBocmVmPSJodHRwczovL2J1eS5zdHJpcGUuY29tLzE0QTVreDVxR2N2cTBlUmM2YzZOYTAxIiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciIgY2xhc3M9ImJ0biBidG4tLW91dGxpbmUiIGRhdGEtcGxhbi1saW5rPkVsZWdpciBwbGFuPC9hPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgY2FyZC0tcHJpY2luZyBjYXJkLS1mZWF0dXJlZCI+CiAgICAgICAgICA8cCBjbGFzcz0iYmFkZ2UiPk3DoXMgZWxlZ2lkbzwvcD4KICAgICAgICAgIDxoMz5Cb25vIDQgY2xhc2VzPC9oMz4KICAgICAgICAgIDxwIGNsYXNzPSJwcmljZSI+OTDigqwgPHNwYW4gY2xhc3M9InByaWNlX191bml0Ij4vIG1lczwvc3Bhbj48L3A+CiAgICAgICAgICA8dWwgY2xhc3M9InByaWNlLWxpc3QiPgogICAgICAgICAgICA8bGk+NCBjbGFzZXMgaW5kaXZpZHVhbGVzIGRlIDYwIG1pbiBhbCBtZXM8L2xpPgogICAgICAgICAgICA8bGk+U2VndWltaWVudG8gZGUgcHJvZ3Jlc288L2xpPgogICAgICAgICAgICA8bGk+PHNtYWxsPkFob3JyYSAxMOKCrCBmcmVudGUgYSBjbGFzZSBzdWVsdGE8L3NtYWxsPjwvbGk+CiAgICAgICAgICA8L3VsPgogICAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9idXkuc3RyaXBlLmNvbS8yOEUxNGg1cUdicm00djdlZWs2TmEwMyIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9vcGVuZXIiIGNsYXNzPSJidG4gYnRuLS1wcmltYXJ5Ij5FbGVnaXIgcGxhbjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIGNhcmQtLXByaWNpbmciIGRhdGEtcHJpY2luZy1jYXJkPgogICAgICAgICAgPGgzPkNsYXNlIGdydXBhbDwvaDM+CiAgICAgICAgICA8c2VsZWN0IGNsYXNzPSJkdXJhdGlvbi1zZWxlY3QiIGFyaWEtbGFiZWw9IkR1cmFjacOzbiBkZSBsYSBjbGFzZSBncnVwYWwiPgogICAgICAgICAgICA8b3B0aW9uIGRhdGEtcHJpY2U9IjMwIiBkYXRhLWR1cmF0aW9uPSI0NSBtaW4iIGRhdGEtbGluaz0iaHR0cHM6Ly9idXkuc3RyaXBlLmNvbS9hRmFjTVo5R1c5amU2RGY0REs2TmEwNCI+NDUgbWluPC9vcHRpb24+CiAgICAgICAgICAgIDxvcHRpb24gZGF0YS1wcmljZT0iNDUiIGRhdGEtZHVyYXRpb249IjYwIG1pbiIgZGF0YS1saW5rPSJodHRwczovL2J1eS5zdHJpcGUuY29tLzRnTWVWN2c1azY3MjNyMzhVMDZOYTA1IiBzZWxlY3RlZD42MCBtaW48L29wdGlvbj4KICAgICAgICAgICAgPG9wdGlvbiBkYXRhLXByaWNlPSI1NSIgZGF0YS1kdXJhdGlvbj0iOTAgbWluIiBkYXRhLWxpbms9Imh0dHBzOi8vYnV5LnN0cmlwZS5jb20vOUI2ZVY3M2l5ZkhDNHY3NERLNk5hMDYiPjkwIG1pbjwvb3B0aW9uPgogICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICA8cCBjbGFzcz0icHJpY2UiPjxzcGFuIGNsYXNzPSJwcmljZV9fYW1vdW50Ij40NeKCrDwvc3Bhbj4gPHNwYW4gY2xhc3M9InByaWNlX191bml0Ij4vIGNsYXNlICg2MCBtaW4pPC9zcGFuPjwvcD4KICAgICAgICAgIDx1bCBjbGFzcz0icHJpY2UtbGlzdCI+CiAgICAgICAgICAgIDxsaT5HcnVwb3MgZGUgM+KAkzYgYWx1bW5vczwvbGk+CiAgICAgICAgICAgIDxsaT5OaXZlbCBob21vZ8OpbmVvPC9saT4KICAgICAgICAgICAgPGxpPkhvcmFyaW8gZmxleGlibGU8L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vYnV5LnN0cmlwZS5jb20vNGdNZVY3ZzVrNjcyM3IzOFUwNk5hMDUiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIiBjbGFzcz0iYnRuIGJ0bi0tb3V0bGluZSIgZGF0YS1wbGFuLWxpbms+RWxlZ2lyIHBsYW48L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8IS0tIFNPQlJFIE3DjSAtLT4KICA8c2VjdGlvbiBjbGFzcz0ic2VjdGlvbiBzZWN0aW9uLS1tdXRlZCIgaWQ9InNvYnJlLW1pIj4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciBhYm91dCI+CiAgICAgIDxkaXYgY2xhc3M9ImFib3V0X192aXN1YWwiIGFyaWEtaGlkZGVuPSJ0cnVlIj7imZ48L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYWJvdXRfX3RleHQiPgogICAgICAgIDxwIGNsYXNzPSJleWVicm93Ij5Tb2JyZSBtw608L3A+CiAgICAgICAgPGgyPkhvbGEsIHNveSBFbWlsaWEgVmVsw6FzcXVlejwvaDI+CiAgICAgICAgPHA+SnVlZ28gYWplZHJleiBkZXNkZSBsb3MgNiBhw7Fvcy4gUmVwcmVzZW50w6kgYSBQZXLDuiBlbiB0b3JuZW9zIHBhbmFtZXJpY2Fub3MsIGNvbnRpbmVudGFsZXMgeSBlbiBlbCBNdW5kaWFsIEp1dmVuaWwgZGUgVmlldG5hbSAyMDA4LiBIb3kgc295IHByb2Zlc29yYSBjZXJ0aWZpY2FkYSB5IMOhcmJpdHJvIGRlIGFqZWRyZXosIGNvbiBleHBlcmllbmNpYSBlbnNlw7FhbmRvIGVuIGNvbGVnaW9zLCBsaWdhcyB5IGRlIGZvcm1hIHBhcnRpY3VsYXIgZW4gUGVyw7osIEF1c3RyYWxpYSB5IEVzcGHDsWEuPC9wPgogICAgICAgIDxwPk1pIG9iamV0aXZvIGVuIGNhZGEgY2xhc2UgZXMgYWRhcHRhcm1lIGEgbGEgcGVyc29uYSBxdWUgdGVuZ28gZGVsYW50ZTogdW4gbmnDsW8gbmVjZXNpdGEganVnYXIgeSBkZXNjdWJyaXIsIHVuIGFkb2xlc2NlbnRlIG5lY2VzaXRhIHJldG9zLCB5IHVuYSBwZXJzb25hIG1heW9yIG5lY2VzaXRhIGNhbG1hIHkgYnVlbmEgY29tcGHDscOtYS4gUG9yIGVzbyBjYWRhIHBsYW4gZGUgY2xhc2VzIGVzIGRpc3RpbnRvLjwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJvdXNlbC13cmFwIj4KICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0iY2Fyb3VzZWwtbmF2IGNhcm91c2VsLW5hdi0tcHJldiIgYXJpYS1sYWJlbD0iTG9ncm8gYW50ZXJpb3IiPuKAuTwvYnV0dG9uPgogICAgICAgICAgPGRpdiBjbGFzcz0iY2Fyb3VzZWwiIGlkPSJhY2hpZXZlbWVudHNDYXJvdXNlbCI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgY2FyZC0tYmVudG8tZmVhdHVyZWQiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmRfX2ljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj7imZo8L2Rpdj4KICAgICAgICAgICAgICA8aDM+TXVuZGlhbCBKdXZlbmlsLCBWaWV0bmFtIDIwMDg8L2gzPgogICAgICAgICAgICAgIDxwPlJlcHJlc2VudMOpIGEgUGVyw7osIGNhdGVnb3LDrWEgU3ViIDA4LCBwdWVzdG8gMzMuPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZF9faWNvbiIgYXJpYS1oaWRkZW49InRydWUiPuKZmzwvZGl2PgogICAgICAgICAgICAgIDxoMz5QYW5hbWVyaWNhbmEgU3ViIDA4PC9oMz4KICAgICAgICAgICAgICA8cD5YSVggRmVzdGl2YWwgUGFuYW1lcmljYW5vIGRlIGxhIEp1dmVudHVkLCBDw7NyZG9iYSwgQXJnZW50aW5hLCAyMDA4LjwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmRfX2ljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj7imJw8L2Rpdj4KICAgICAgICAgICAgICA8aDM+Q2FtcGVvbmEgZGVsIEFjdGl2byB5IGRlbCBCbGl0ejwvaDM+CiAgICAgICAgICAgICAgPHA+Q2FtcGVvbmF0byBDb250aW5lbnRhbCBFc2NvbGFyIGRlIGxhcyBBbcOpcmljYXMsIENhcnRhZ2VuYSwgQ29sb21iaWEsIFN1YiAwNywgMjAwOC48L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkX19pY29uIiBhcmlhLWhpZGRlbj0idHJ1ZSI+4pmdPC9kaXY+CiAgICAgICAgICAgICAgPGgzPlN1YmNhbXBlb25hIFN1YiAwNzwvaDM+CiAgICAgICAgICAgICAgPHA+RmVzdGl2YWwgU3VkYW1lcmljYW5vIElTQ1UsIExhIEZhbGRhLCBDw7NyZG9iYSwgQXJnZW50aW5hLCAyMDA3LjwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmRfX2ljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj7imJ48L2Rpdj4KICAgICAgICAgICAgICA8aDM+Q2FtcGVvbmEgU3ViIDEwPC9oMz4KICAgICAgICAgICAgICA8cD5QYW5hbWVyaWNhbm8gRXNjb2xhciBkZSBsYSBKdXZlbnR1ZCwgQm9nb3TDoSwgQ29sb21iaWEsIDIwMDkuPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZF9faWNvbiIgYXJpYS1oaWRkZW49InRydWUiPuKZnzwvZGl2PgogICAgICAgICAgICAgIDxoMz5NZWRhbGxhIGRlIGJyb25jZSBTdWIgMTA8L2gzPgogICAgICAgICAgICAgIDxwPkZlc3RpdmFsIFN1ZGFtZXJpY2FubyBkZSBBamVkcmV6IGRlIGxhIEp1dmVudHVkLCBNZW5kZXMsIEJyYXNpbCwgMjAwOS48L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJhdmF0YXItY2lyY2xlcyIgYXJpYS1oaWRkZW49InRydWUiPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImF2YXRhci1jaXJjbGUiPuKZnzwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJhdmF0YXItY2lyY2xlIj7imZ48L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iYXZhdGFyLWNpcmNsZSI+4pmdPC9zcGFuPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImF2YXRhci1jaXJjbGUiPuKZnDwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJhdmF0YXItY2lyY2xlIj7imZs8L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iYXZhdGFyLWNpcmNsZSBhdmF0YXItY2lyY2xlLS1tb3JlIj4rMTAwPC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxoMz4rMTAwIHRvcm5lb3M8L2gzPgogICAgICAgICAgICAgIDxwPkNhbXBlb25hIEVzY29sYXIgZGVsIFBlcsO6LCBDYW1wZW9uYSBSZWdpb25hbCB5IENhbXBlb25hIGRlIEFyZXF1aXBhLCBlbnRyZSBtw6FzIGRlIDEwMCB0b3JuZW9zIGRpc3B1dGFkb3MgZW4gQXJlcXVpcGEuPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJjYXJvdXNlbC1uYXYgY2Fyb3VzZWwtbmF2LS1uZXh0IiBhcmlhLWxhYmVsPSJMb2dybyBzaWd1aWVudGUiPuKAujwvYnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPCEtLSBGQVEgLS0+CiAgPHNlY3Rpb24gY2xhc3M9InNlY3Rpb24iIGlkPSJmYXEiPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPlByZWd1bnRhcyBmcmVjdWVudGVzPC9wPgogICAgICA8aDI+wr9UaWVuZXMgZHVkYXM/PC9oMj4KICAgICAgPGRpdiBjbGFzcz0iZmFxIj4KICAgICAgICA8ZGV0YWlscyBjbGFzcz0iZmFxX19pdGVtIj4KICAgICAgICAgIDxzdW1tYXJ5PsK/TmVjZXNpdG8gc2FiZXIganVnYXIgcGFyYSBlbXBlemFyPzwvc3VtbWFyeT4KICAgICAgICAgIDxwPk5vLCBtdWNob3MgYWx1bW5vcyBlbXBpZXphbiBkZXNkZSBjZXJvLiBBZGFwdGFtb3MgbGEgcHJpbWVyYSBjbGFzZSBwYXJhIGNvbm9jZXIgdHUgbml2ZWwgZGUgcGFydGlkYS48L3A+CiAgICAgICAgPC9kZXRhaWxzPgogICAgICAgIDxkZXRhaWxzIGNsYXNzPSJmYXFfX2l0ZW0iPgogICAgICAgICAgPHN1bW1hcnk+wr9RdcOpIG5lY2VzaXRvIHBhcmEgbGFzIGNsYXNlcyBvbmxpbmU/PC9zdW1tYXJ5PgogICAgICAgICAgPHA+U29sbyB1biBvcmRlbmFkb3IsIHRhYmxldCBvIG3Ds3ZpbCBjb24gY29uZXhpw7NuIGEgaW50ZXJuZXQuIFVzYW1vcyB2aWRlb2xsYW1hZGEgeSB1biB0YWJsZXJvIGRpZ2l0YWwgY29tcGFydGlkbywgbm8gaGFjZSBmYWx0YSBpbnN0YWxhciBuYWRhIGNvbXBsaWNhZG8uPC9wPgogICAgICAgIDwvZGV0YWlscz4KICAgICAgICA8ZGV0YWlscyBjbGFzcz0iZmFxX19pdGVtIj4KICAgICAgICAgIDxzdW1tYXJ5PsK/UHVlZG8gY2FtYmlhciBkZSBwbGFuIGluZGl2aWR1YWwgYSBncnVwYWw/PC9zdW1tYXJ5PgogICAgICAgICAgPHA+U8OtLCBlbiBjdWFscXVpZXIgbW9tZW50by4gTXVjaG9zIGFsdW1ub3MgZW1waWV6YW4gZW4gaW5kaXZpZHVhbCB5IGx1ZWdvIHNlIHBhc2FuIGEgZ3J1cG8sIG8gYWwgcmV2w6lzLjwvcD4KICAgICAgICA8L2RldGFpbHM+CiAgICAgICAgPGRldGFpbHMgY2xhc3M9ImZhcV9faXRlbSI+CiAgICAgICAgICA8c3VtbWFyeT7Cv0hheSBjbGFzZXMgcGVuc2FkYXMgZXNwZWNpYWxtZW50ZSBwYXJhIHBlcnNvbmFzIG1heW9yZXM/PC9zdW1tYXJ5PgogICAgICAgICAgPHA+U8OtLCBjb24gdW4gcml0bW8gbcOhcyBwYXVzYWRvLCBleHBsaWNhY2lvbmVzIHNpbiBwcmlzYSB5IHVuIGVuZm9xdWUgZW4gbGEgcGFydGUgc29jaWFsIHkgZGUgZGlzZnJ1dGUgZGVsIGp1ZWdvLjwvcD4KICAgICAgICA8L2RldGFpbHM+CiAgICAgICAgPGRldGFpbHMgY2xhc3M9ImZhcV9faXRlbSI+CiAgICAgICAgICA8c3VtbWFyeT7Cv0PDs21vIHNlIHBhZ2E/PC9zdW1tYXJ5PgogICAgICAgICAgPHA+UG9yIHRyYW5zZmVyZW5jaWEgbyBCaXp1bSwgbWVuc3VhbCBvIHBvciBjbGFzZSBzdWVsdGEuIFRlIGxvIGV4cGxpY28gY29uIGRldGFsbGUgYWwgcmVzZXJ2YXIgdHUgcHJpbWVyYSBjbGFzZS48L3A+CiAgICAgICAgPC9kZXRhaWxzPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPCEtLSBDT05UQUNUTyAtLT4KICA8c2VjdGlvbiBjbGFzcz0ic2VjdGlvbiBzZWN0aW9uLS1tdXRlZCIgaWQ9ImNvbnRhY3RvIj4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciBjb250YWN0byI+CiAgICAgIDxkaXYgY2xhc3M9ImNvbnRhY3RvX190ZXh0Ij4KICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+Q29udGFjdG88L3A+CiAgICAgICAgPGgyPkVtcGVjZW1vcyBjb24gdHUgcHJpbWVyYSBjbGFzZTwvaDI+CiAgICAgICAgPHA+Q3XDqW50YW1lIHVuIHBvY28gc29icmUgdGkgKG8gc29icmUgdHUgaGlqby9hKSB5IHRlIHJlc3BvbmRlcsOpIHBhcmEgY3VhZHJhciBlbCBob3JhcmlvIHkgZWwgcGxhbiBxdWUgbWVqb3IgZW5jYWplLjwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWN0b19fYWx0Ij4KICAgICAgICAgIDxhIGhyZWY9Im1haWx0bzpob2xhQGNoZXNzLmV4YW1wbGUiIGNsYXNzPSJjb250YWN0b19fbGluayI+4pyJ77iPIGhvbGFAY2hlc3MuZXhhbXBsZTwvYT4KICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vd2EubWUvMzQ2MDAwMDAwMDAiIGNsYXNzPSJjb250YWN0b19fbGluayI+8J+SrCBXaGF0c0FwcDogNjAwIDAwMCAwMDA8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8Zm9ybSBjbGFzcz0iZm9ybSIgaWQ9ImNvbnRhY3RGb3JtIj4KICAgICAgICA8bGFiZWw+CiAgICAgICAgICBOb21icmUKICAgICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJub21icmUiIHJlcXVpcmVkPgogICAgICAgIDwvbGFiZWw+CiAgICAgICAgPGxhYmVsPgogICAgICAgICAgRW1haWwKICAgICAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgbmFtZT0iZW1haWwiIHJlcXVpcmVkPgogICAgICAgIDwvbGFiZWw+CiAgICAgICAgPGxhYmVsPgogICAgICAgICAgRWRhZCBkZWwgYWx1bW5vL2EgaW50ZXJlc2Fkby9hCiAgICAgICAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0iZWRhZCIgcGxhY2Vob2xkZXI9IkVqLiA5IGHDsW9zLCBhZG9sZXNjZW50ZSwgNjUgYcOxb3MuLi4iPgogICAgICAgIDwvbGFiZWw+CiAgICAgICAgPGxhYmVsPgogICAgICAgICAgTWVuc2FqZQogICAgICAgICAgPHRleHRhcmVhIG5hbWU9Im1lbnNhamUiIHJvd3M9IjQiIHBsYWNlaG9sZGVyPSJDdcOpbnRhbWUgdHUgZGlzcG9uaWJpbGlkYWQgeSBvYmpldGl2byBjb24gbGFzIGNsYXNlcyI+PC90ZXh0YXJlYT4KICAgICAgICA8L2xhYmVsPgogICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0iYnRuIGJ0bi0tcHJpbWFyeSBidG4tLWZ1bGwiPkVudmlhciBtZW5zYWplPC9idXR0b24+CiAgICAgICAgPHAgY2xhc3M9ImZvcm1fX25vdGUiIGlkPSJmb3JtTm90ZSIgaGlkZGVuPsKhR3JhY2lhcyEgVHUgbWVuc2FqZSBzZSBoYSBwcmVwYXJhZG8g4oCUIHJlY3VlcmRhIGNvbmVjdGFyIGVzdGUgZm9ybXVsYXJpbyBhIHVuIHNlcnZpY2lvIGRlIGVudsOtbyAocG9yIGVqZW1wbG8gRm9ybXNwcmVlKSBwYXJhIHF1ZSBsbGVndWUgZGUgdmVyZGFkIGEgdHUgZW1haWwuPC9wPgogICAgICA8L2Zvcm0+CiAgICA8L2Rpdj4KICA8L3NlY3Rpb24+Cgo8L21haW4+Cgo8Zm9vdGVyIGNsYXNzPSJmb290ZXIiPgogIDxkaXYgY2xhc3M9ImNvbnRhaW5lciBmb290ZXJfX2lubmVyIj4KICAgIDxkaXYgY2xhc3M9ImZvb3Rlcl9fYnJhbmQiPgogICAgICA8c3BhbiBjbGFzcz0ibG9nbyI+CiAgICAgICAgPHN2ZyBjbGFzcz0ibG9nb19faWNvbiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxLjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBhcmlhLWhpZGRlbj0idHJ1ZSI+CiAgICAgICAgICA8cGF0aCBkPSJNNS41IDkuNUw5IDJMOS44IDkuNVoiLz4KICAgICAgICAgIDxwYXRoIGQ9Ik0xOC41IDkuNUwxNSAyTDE0LjIgOS41WiIvPgogICAgICAgICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMC41IiByPSI1LjIiLz4KICAgICAgICAgIDxyZWN0IHg9IjguNyIgeT0iMTMuNSIgd2lkdGg9IjYuNiIgaGVpZ2h0PSI1LjUiIHJ4PSIzIi8+CiAgICAgICAgICA8Y2lyY2xlIGN4PSI5LjciIGN5PSI5LjgiIHI9IjAuOCIgZmlsbD0iY3VycmVudENvbG9yIiBzdHJva2U9Im5vbmUiLz4KICAgICAgICAgIDxjaXJjbGUgY3g9IjE0LjMiIGN5PSI5LjgiIHI9IjAuOCIgZmlsbD0iY3VycmVudENvbG9yIiBzdHJva2U9Im5vbmUiLz4KICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMiIgY3k9IjE3LjMiIHJ4PSIwLjkiIHJ5PSIwLjciIGZpbGw9ImN1cnJlbnRDb2xvciIgc3Ryb2tlPSJub25lIi8+CiAgICAgICAgPC9zdmc+CiAgICAgICAgPHNwYW4+Q0hFU1M8L3NwYW4+CiAgICAgIDwvc3Bhbj4KICAgICAgPHA+Q2xhc2VzIGRlIGFqZWRyZXogb25saW5lIHBhcmEgbmnDsW9zLCBhZG9sZXNjZW50ZXMgeSBwZXJzb25hcyBtYXlvcmVzLjwvcD4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iZm9vdGVyX19jb2wiPgogICAgICA8aDQ+TmF2ZWdhY2nDs248L2g0PgogICAgICA8YSBocmVmPSIjcGFyYS1xdWllbiI+UGFyYSBxdWnDqW48L2E+CiAgICAgIDxhIGhyZWY9IiNjbGFzZXMiPkNsYXNlczwvYT4KICAgICAgPGEgaHJlZj0iI3ByZWNpb3MiPlByZWNpb3M8L2E+CiAgICAgIDxhIGhyZWY9IiNmYXEiPkZBUTwvYT4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iZm9vdGVyX19jb2wiPgogICAgICA8aDQ+Q29udGFjdG88L2g0PgogICAgICA8YSBocmVmPSJtYWlsdG86aG9sYUBjaGVzcy5leGFtcGxlIj5ob2xhQGNoZXNzLmV4YW1wbGU8L2E+CiAgICAgIDxhIGhyZWY9Imh0dHBzOi8vd2EubWUvMzQ2MDAwMDAwMDAiPldoYXRzQXBwPC9hPgogICAgPC9kaXY+CiAgPC9kaXY+CiAgPGRpdiBjbGFzcz0iY29udGFpbmVyIGZvb3Rlcl9fYm90dG9tIj4KICAgIDxwPsKpIDIwMjYgQ0hFU1MuIFRvZG9zIGxvcyBkZXJlY2hvcyByZXNlcnZhZG9zLjwvcD4KICA8L2Rpdj4KPC9mb290ZXI+Cgo8c2NyaXB0IHNyYz0ianMvbWFpbi5qcyI+PC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo=
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<title>CHESS — Clases de ajedrez online</title>
+<meta name="description" content="Clases particulares y grupales de ajedrez online para niños, adolescentes y personas mayores. Aprende a tu ritmo, desde cualquier lugar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="logo">
+      <svg class="logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5.5 9.5L9 2L9.8 9.5Z"/>
+        <path d="M18.5 9.5L15 2L14.2 9.5Z"/>
+        <circle cx="12" cy="10.5" r="5.2"/>
+        <rect x="8.7" y="13.5" width="6.6" height="5.5" rx="3"/>
+        <circle cx="9.7" cy="9.8" r="0.8" fill="currentColor" stroke="none"/>
+        <circle cx="14.3" cy="9.8" r="0.8" fill="currentColor" stroke="none"/>
+        <ellipse cx="12" cy="17.3" rx="0.9" ry="0.7" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>CHESS</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#para-quien">Para quién</a>
+      <a href="#clases">Clases</a>
+      <a href="#precios">Precios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+      <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6" y2="6"/>
+          <line x1="18" y1="18" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+      <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/>
+      </svg>
+    </button>
+    <a href="#contacto" class="btn btn--primary btn--nav">Reserva tu clase</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Clases de ajedrez 100% online</p>
+        <h1 aria-label="Aprende ajedrez a tu ritmo, sea cual sea tu edad"><span class="typing-text" id="typingHeadline" data-text="Aprende ajedrez a tu ritmo, sea cual sea tu edad" aria-hidden="true"></span><span class="typing-cursor" aria-hidden="true"></span></h1>
+        <p class="hero__subtitle">Clases particulares y grupales para niños, adolescentes y personas mayores. Sin desplazamientos, con un plan pensado para cada alumno.</p>
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--primary btn--lg">Reserva tu primera clase</a>
+          <a href="#clases" class="btn btn--text">Ver cómo funcionan las clases ↓</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="board" id="board" tabindex="0" role="button" aria-label="Tablero de ajedrez interactivo, toca para mover la pieza">
+          <svg class="board__piece" id="boardPiece" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2l1.8 3.6L18 6l-2.2 3.2L17 13H7l1.2-3.8L6 6l4.2-.4L12 2z" fill="currentColor"/>
+            <path d="M6 22l1.3-6.5h9.4L18 22H6z" fill="currentColor"/>
+          </svg>
+        </div>
+        <p class="board__hint">Toca el tablero para mover la pieza ♟</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust">
+    <div class="container trust__inner">
+      <div class="trust__item"><strong><span class="number-ticker" data-target="75" data-prefix="6–" data-suffix="+">6–0+</span></strong><span>años de nuestros alumnos</span></div>
+      <div class="trust__item"><strong>1 a 1 o en grupo</strong><span>clases adaptadas a cada nivel</span></div>
+      <div class="trust__item"><strong><span class="number-ticker" data-target="100" data-suffix="% online">0% online</span></strong><span>desde cualquier lugar</span></div>
+      <div class="trust__item"><strong>Todos los niveles</strong><span>desde cero hasta competición</span></div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="section" id="para-quien">
+    <div class="container">
+      <p class="eyebrow">Para quién</p>
+      <h2>Un plan de ajedrez para cada alumno</h2>
+      <div class="cards cards--bento">
+        <div class="card card--bento-featured">
+          <div class="card__icon" aria-hidden="true">♟</div>
+          <h3>Niños</h3>
+          <p>Introducción al ajedrez con juegos, retos y mucha paciencia. Trabajamos concentración, cálculo y paciencia mientras se divierten.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">♞</div>
+          <h3>Adolescentes</h3>
+          <p>Perfeccionamiento técnico, preparación para torneos y desarrollo de pensamiento estratégico, a un ritmo exigente pero cercano.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">♚</div>
+          <h3>Personas mayores</h3>
+          <p>Clases tranquilas y sin prisa, ideales para mantener la mente activa, socializar y disfrutar del juego sin presión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO SON LAS CLASES -->
+  <section class="section section--muted" id="clases">
+    <div class="container">
+      <p class="eyebrow">Cómo funcionan</p>
+      <h2>Clases online, simples de seguir</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step__number">1</span>
+          <h3>Reservamos tu horario</h3>
+          <p>Eliges el día y la hora que mejor te encaje, según disponibilidad, por videollamada (Zoom, Meet o similar).</p>
+        </div>
+        <div class="step">
+          <span class="step__number">2</span>
+          <h3>Clase en directo</h3>
+          <p>Usamos un tablero digital compartido: tú ves y mueves las piezas igual que en un tablero real, sin necesidad de instalar nada complicado.</p>
+        </div>
+        <div class="step">
+          <span class="step__number">3</span>
+          <h3>Práctica y seguimiento</h3>
+          <p>Al final de cada clase te llevas ejercicios y partidas para practicar, y llevamos un seguimiento de tu progreso.</p>
+        </div>
+      </div>
+      <div class="modalidades">
+        <div class="modalidad-card">
+          <h3>Clases individuales</h3>
+          <p>Atención 100% personalizada. Ideal para avanzar rápido o preparar torneos concretos.</p>
+        </div>
+        <div class="modalidad-card">
+          <h3>Clases grupales</h3>
+          <p>Grupos reducidos (3–6 alumnos) de nivel similar. Mismo nivel de atención, con el plus de aprender en compañía.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="section" id="precios">
+    <div class="container">
+      <p class="eyebrow">Precios</p>
+      <h2>Tarifas y planes</h2>
+      <p class="section__intro">Precios fijos y sin sorpresas. Elige la duración que mejor te encaje.</p>
+      <div class="cards cards--3 cards--pricing">
+        <div class="card card--pricing" data-pricing-card>
+          <h3>Clase individual</h3>
+          <select class="duration-select" aria-label="Duración de la clase individual">
+            <option data-price="20" data-duration="45 min" data-link="https://buy.stripe.com/bJeaER7yO6728Ln9Y46Na00">45 min</option>
+            <option data-price="25" data-duration="60 min" data-link="https://buy.stripe.com/14A5kx5qGcvq0eRc6c6Na01" selected>60 min</option>
+            <option data-price="35" data-duration="90 min" data-link="https://buy.stripe.com/8x228laL03YU9Pr4DK6Na02">90 min</option>
+          </select>
+          <p class="price"><span class="price__amount">25€</span> <span class="price__unit">/ clase (60 min)</span></p>
+          <ul class="price-list">
+            <li>Atención 100% personalizada</li>
+            <li>Material y ejercicios incluidos</li>
+            <li>Horario flexible</li>
+          </ul>
+          <a href="https://buy.stripe.com/14A5kx5qGcvq0eRc6c6Na01" target="_blank" rel="noopener" class="btn btn--outline" data-plan-link>Elegir plan</a>
+        </div>
+        <div class="card card--pricing card--featured">
+          <p class="badge">Más elegido</p>
+          <h3>Bono 4 clases</h3>
+          <p class="price">90€ <span class="price__unit">/ mes</span></p>
+          <ul class="price-list">
+            <li>4 clases individuales de 60 min al mes</li>
+            <li>Seguimiento de progreso</li>
+            <li><small>Ahorra 10€ frente a clase suelta</small></li>
+          </ul>
+          <a href="https://buy.stripe.com/28E14h5qGbrm4v7eek6Na03" target="_blank" rel="noopener" class="btn btn--primary">Elegir plan</a>
+        </div>
+        <div class="card card--pricing" data-pricing-card>
+          <h3>Clase grupal</h3>
+          <select class="duration-select" aria-label="Duración de la clase grupal">
+            <option data-price="30" data-duration="45 min" data-link="https://buy.stripe.com/aFacMZ9GW9je6Df4DK6Na04">45 min</option>
+            <option data-price="45" data-duration="60 min" data-link="https://buy.stripe.com/4gMeV7g5k6723r38U06Na05" selected>60 min</option>
+            <option data-price="55" data-duration="90 min" data-link="https://buy.stripe.com/9B6eV73iyfHC4v74DK6Na06">90 min</option>
+          </select>
+          <p class="price"><span class="price__amount">45€</span> <span class="price__unit">/ clase (60 min)</span></p>
+          <ul class="price-list">
+            <li>Grupos de 3–6 alumnos</li>
+            <li>Nivel homogéneo</li>
+            <li>Horario flexible</li>
+          </ul>
+          <a href="https://buy.stripe.com/4gMeV7g5k6723r38U06Na05" target="_blank" rel="noopener" class="btn btn--outline" data-plan-link>Elegir plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section section--muted" id="sobre-mi">
+    <div class="container about">
+      <div class="about__visual" aria-hidden="true">♞</div>
+      <div class="about__text">
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Hola, soy Emilia Velásquez</h2>
+        <p>Juego ajedrez desde los 6 años. Representé a Perú en torneos panamericanos, continentales y en el Mundial Juvenil de Vietnam 2008. Hoy soy profesora certificada y árbitro de ajedrez, con experiencia enseñando en colegios, ligas y de forma particular en Perú, Australia y España.</p>
+        <p>Mi objetivo en cada clase es adaptarme a la persona que tengo delante: un niño necesita jugar y descubrir, un adolescente necesita retos, y una persona mayor necesita calma y buena compañía. Por eso cada plan de clases es distinto.</p>
+        <div class="carousel-wrap">
+          <button type="button" class="carousel-nav carousel-nav--prev" aria-label="Logro anterior">‹</button>
+          <div class="carousel" id="achievementsCarousel">
+            <div class="card card--bento-featured">
+              <div class="card__icon" aria-hidden="true">♚</div>
+              <h3>Mundial Juvenil, Vietnam 2008</h3>
+              <p>Representé a Perú, categoría Sub 08, puesto 33.</p>
+            </div>
+            <div class="card">
+              <div class="card__icon" aria-hidden="true">♛</div>
+              <h3>Panamericana Sub 08</h3>
+              <p>XIX Festival Panamericano de la Juventud, Córdoba, Argentina, 2008.</p>
+            </div>
+            <div class="card">
+              <div class="card__icon" aria-hidden="true">♜</div>
+              <h3>Campeona del Activo y del Blitz</h3>
+              <p>Campeonato Continental Escolar de las Américas, Cartagena, Colombia, Sub 07, 2008.</p>
+            </div>
+            <div class="card">
+              <div class="card__icon" aria-hidden="true">♝</div>
+              <h3>Subcampeona Sub 07</h3>
+              <p>Festival Sudamericano ISCU, La Falda, Córdoba, Argentina, 2007.</p>
+            </div>
+            <div class="card">
+              <div class="card__icon" aria-hidden="true">♞</div>
+              <h3>Campeona Sub 10</h3>
+              <p>Panamericano Escolar de la Juventud, Bogotá, Colombia, 2009.</p>
+            </div>
+            <div class="card">
+              <div class="card__icon" aria-hidden="true">♟</div>
+              <h3>Medalla de bronce Sub 10</h3>
+              <p>Festival Sudamericano de Ajedrez de la Juventud, Mendes, Brasil, 2009.</p>
+            </div>
+            <div class="card">
+              <div class="avatar-circles" aria-hidden="true">
+                <span class="avatar-circle">♟</span>
+                <span class="avatar-circle">♞</span>
+                <span class="avatar-circle">♝</span>
+                <span class="avatar-circle">♜</span>
+                <span class="avatar-circle">♛</span>
+                <span class="avatar-circle avatar-circle--more">+100</span>
+              </div>
+              <h3>+100 torneos</h3>
+              <p>Campeona Escolar del Perú, Campeona Regional y Campeona de Arequipa, entre más de 100 torneos disputados en Arequipa.</p>
+            </div>
+          </div>
+          <button type="button" class="carousel-nav carousel-nav--next" aria-label="Logro siguiente">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>¿Tienes dudas?</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>¿Necesito saber jugar para empezar?</summary>
+          <p>No, muchos alumnos empiezan desde cero. Adaptamos la primera clase para conocer tu nivel de partida.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué necesito para las clases online?</summary>
+          <p>Solo un ordenador, tablet o móvil con conexión a internet. Usamos videollamada y un tablero digital compartido, no hace falta instalar nada complicado.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Puedo cambiar de plan individual a grupal?</summary>
+          <p>Sí, en cualquier momento. Muchos alumnos empiezan en individual y luego se pasan a grupo, o al revés.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Hay clases pensadas especialmente para personas mayores?</summary>
+          <p>Sí, con un ritmo más pausado, explicaciones sin prisa y un enfoque en la parte social y de disfrute del juego.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cómo se paga?</summary>
+          <p>Por transferencia o Bizum, mensual o por clase suelta. Te lo explico con detalle al reservar tu primera clase.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section--muted" id="contacto">
+    <div class="container contacto">
+      <div class="contacto__text">
+        <p class="eyebrow">Contacto</p>
+        <h2>Empecemos con tu primera clase</h2>
+        <p>Cuéntame un poco sobre ti (o sobre tu hijo/a) y te responderé para cuadrar el horario y el plan que mejor encaje.</p>
+        <div class="contacto__alt">
+          <a href="mailto:hola@chess.example" class="contacto__link">✉️ hola@chess.example</a>
+          <a href="https://wa.me/34600000000" class="contacto__link">💬 WhatsApp: 600 000 000</a>
+        </div>
+      </div>
+      <form class="form" id="contactForm">
+        <label>
+          Nombre
+          <input type="text" name="nombre" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Edad del alumno/a interesado/a
+          <input type="text" name="edad" placeholder="Ej. 9 años, adolescente, 65 años...">
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="4" placeholder="Cuéntame tu disponibilidad y objetivo con las clases"></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+        <p class="form__note" id="formNote" hidden>¡Gracias! Tu mensaje se ha preparado — recuerda conectar este formulario a un servicio de envío (por ejemplo Formspree) para que llegue de verdad a tu email.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo">
+        <svg class="logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5.5 9.5L9 2L9.8 9.5Z"/>
+          <path d="M18.5 9.5L15 2L14.2 9.5Z"/>
+          <circle cx="12" cy="10.5" r="5.2"/>
+          <rect x="8.7" y="13.5" width="6.6" height="5.5" rx="3"/>
+          <circle cx="9.7" cy="9.8" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="14.3" cy="9.8" r="0.8" fill="currentColor" stroke="none"/>
+          <ellipse cx="12" cy="17.3" rx="0.9" ry="0.7" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>CHESS</span>
+      </span>
+      <p>Clases de ajedrez online para niños, adolescentes y personas mayores.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="#para-quien">Para quién</a>
+      <a href="#clases">Clases</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="mailto:hola@chess.example">hola@chess.example</a>
+      <a href="https://wa.me/34600000000">WhatsApp</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 CHESS. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
