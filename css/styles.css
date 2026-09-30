@@ -204,6 +204,21 @@ a { color: inherit; text-decoration: none; }
 
 .logo__icon { width: 34px; height: 34px; color: var(--accent); }
 
+.logo__icon-img {
+  width: 35px;
+  height: 56px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo__icon-img { filter: invert(1); }
+}
+
+:root[data-theme="dark"] .logo__icon-img { filter: invert(1); }
+
 .nav {
   display: flex;
   gap: 20px;
@@ -343,6 +358,21 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero__visual { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+.board-wrap { position: relative; }
+
+.hero__mascot {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid var(--bg);
+  box-shadow: var(--shadow-lg);
+}
 
 .board {
   position: relative;
@@ -826,6 +856,34 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contacto__link:hover { color: var(--accent); }
+
+.gracias { padding: 140px 0; }
+
+.gracias__inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gracias__icon {
+  font-size: 56px;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.gracias__text {
+  margin-bottom: 12px;
+}
+
+.gracias__alt {
+  font-size: 14px;
+  margin-top: 20px;
+}
 
 .form {
   background: var(--bg);

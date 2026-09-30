@@ -90,9 +90,26 @@ themeToggle.addEventListener('click', () => {
 
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const WHATSAPP_NUMBER = '34603603181';
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  const data = new FormData(form);
+  const nombre = data.get('nombre') || '';
+  const email = data.get('email') || '';
+  const edad = data.get('edad') || '';
+  const mensaje = data.get('mensaje') || '';
+
+  const lines = [
+    `Hola, soy ${nombre}.`,
+    email && `Mi email: ${email}.`,
+    edad && `Edad del alumno/a: ${edad}.`,
+    mensaje && `Mensaje: ${mensaje}`,
+  ].filter(Boolean);
+
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join(' '))}`;
+  window.open(whatsappUrl, '_blank', 'noopener');
+
   formNote.hidden = false;
   form.reset();
 });

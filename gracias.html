@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<title>¡Gracias! — CHESSTER</title>
+<meta name="description" content="Gracias por tu compra. Escríbeme por WhatsApp para agendar tu primera clase de ajedrez.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="assets/brand-images.css">
+<link rel="icon" type="image/png" href="assets/logo-dog-head.png">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__icon-img" aria-hidden="true"></span>
+      <span>CHESSTER</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+      <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6" y2="6"/>
+          <line x1="18" y1="18" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+      <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section gracias">
+    <div class="container gracias__inner">
+      <div class="gracias__icon" aria-hidden="true">♚</div>
+      <p class="eyebrow">Pago confirmado</p>
+      <h1>¡Gracias por tu compra!</h1>
+      <p class="gracias__text" id="graciasText">Tu plan ya quedó registrado. Para coordinar el horario de tu primera clase, escríbeme directo por WhatsApp — te respondo lo antes posible.</p>
+      <a href="#" id="waButton" target="_blank" rel="noopener" class="btn btn--primary btn--lg">💬 Escríbeme por WhatsApp</a>
+      <p class="gracias__alt">¿Prefieres email? Escríbeme a <a href="mailto:emivelasquezv@gmail.com" class="contacto__link">emivelasquezv@gmail.com</a></p>
+      <a href="index.html" class="btn btn--text">← Volver al inicio</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo">
+        <span class="logo__icon-img" aria-hidden="true"></span>
+        <span>CHESSTER</span>
+      </span>
+      <p>Clases de ajedrez online para niños, adolescentes y personas mayores.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#clases">Clases</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 CHESSTER. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
+
+const WHATSAPP_NUMBER = '34603603181';
+const PLAN_LABELS = {
+  'individual-45': 'la clase individual (45 min)',
+  'individual-60': 'la clase individual (60 min)',
+  'individual-90': 'la clase individual (90 min)',
+  'bono4': 'el Bono de 4 clases',
+  'grupal-45': 'la clase grupal (45 min)',
+  'grupal-60': 'la clase grupal (60 min)',
+  'grupal-90': 'la clase grupal (90 min)',
+};
+
+const params = new URLSearchParams(window.location.search);
+const planKey = params.get('plan');
+const planLabel = PLAN_LABELS[planKey] || 'mi plan de clases';
+const message = `Hola, acabo de pagar ${planLabel}. ¿Agendamos mi primera clase?`;
+document.getElementById('waButton').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+</script>
+</body>
+</html>
