@@ -212,10 +212,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo__icon-img { filter: invert(1); }
+  :root:not([data-theme="light"]) .logo__icon-img { filter: brightness(0) invert(0.93) sepia(0.2) brightness(0.96); }
 }
 
-:root[data-theme="dark"] .logo__icon-img { filter: invert(1); }
+:root[data-theme="dark"] .logo__icon-img { filter: brightness(0) invert(0.93) sepia(0.2) brightness(0.96); }
 
 .nav {
   display: flex;
