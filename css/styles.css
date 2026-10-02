@@ -208,9 +208,7 @@ a { color: inherit; text-decoration: none; }
   width: 35px;
   height: 56px;
   display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: contain;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -368,8 +366,7 @@ a { color: inherit; text-decoration: none; }
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   border: 4px solid var(--bg);
   box-shadow: var(--shadow-lg);
 }
