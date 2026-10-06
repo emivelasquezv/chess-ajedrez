@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<title>Política de privacidad — CHESSTER</title>
+<meta name="description" content="Cómo CHESSTER trata tus datos personales y cuáles son tus derechos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/png" href="assets/logo-dog-head.png">
+<style>
+.legal { padding: 70px 0 90px; }
+.legal__inner { max-width: 760px; margin: 0 auto; }
+.legal h1 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; }
+.legal h2 { text-align: left; font-size: 21px; margin: 36px 0 10px; }
+.legal p, .legal li { color: var(--text-muted); font-size: 15.5px; line-height: 1.7; }
+.legal ul { padding-left: 22px; margin: 0 0 12px; }
+.legal a { color: var(--accent); text-decoration: underline; }
+.legal__date { font-size: 14px; margin-bottom: 28px; }
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img data-img="logo" alt="" class="logo__icon-img" width="35" height="56">
+      <span>CHESSTER</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+      <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6" y2="6"/>
+          <line x1="18" y1="18" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+      <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="legal">
+    <div class="container legal__inner">
+      <h1>Política de privacidad</h1>
+      <p class="legal__date">Última actualización: 6 de octubre de 2026</p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <ul>
+        <li><strong>Responsable:</strong> Emilia Velásquez Vera</li>
+        <li><strong>NIE:</strong> Z3345005M</li>
+        <li><strong>Localidad:</strong> Valencia (España)</li>
+        <li><strong>Correo electrónico:</strong> <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a></li>
+      </ul>
+      <p>El tratamiento de tus datos se rige por el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+      <h2>2. Qué datos tratamos</h2>
+      <ul>
+        <li><strong>Formulario de contacto:</strong> nombre, correo electrónico, edad del alumno/a y el mensaje que escribas. Al pulsar «Enviar mensaje» se abre WhatsApp con tu mensaje ya redactado; los datos solo llegan a mí cuando tú lo envías desde WhatsApp.</li>
+        <li><strong>Comunicaciones</strong> por WhatsApp o correo electrónico: tu número de teléfono o dirección de correo y el contenido de los mensajes.</li>
+        <li><strong>Contratación y pago:</strong> nombre, correo electrónico y los datos necesarios para procesar el pago. Los datos completos de la tarjeta los gestiona Stripe; yo no los veo ni los almaceno.</li>
+        <li><strong>Prestación de las clases:</strong> nombre, edad y nivel del alumno/a, y la información que facilites para adaptar las clases.</li>
+      </ul>
+
+      <h2>3. Para qué los usamos y base jurídica</h2>
+      <ul>
+        <li><strong>Atender tus consultas y solicitudes de información</strong> — base: tu consentimiento y la aplicación de medidas precontractuales a petición tuya.</li>
+        <li><strong>Gestionar la contratación, el cobro y la prestación de las clases</strong> — base: ejecución del contrato.</li>
+        <li><strong>Cumplir obligaciones legales</strong>, como las fiscales y contables — base: obligación legal.</li>
+      </ul>
+      <p>No se utilizan tus datos para decisiones automatizadas ni para elaborar perfiles, y no se envían comunicaciones comerciales sin tu consentimiento.</p>
+
+      <h2>4. Destinatarios y proveedores</h2>
+      <p>Para prestar el servicio, algunos datos son tratados por proveedores que actúan en mi nombre o por cuenta propia conforme a sus propias políticas:</p>
+      <ul>
+        <li><strong>Stripe Payments Europe, Ltd.</strong> — procesamiento de pagos.</li>
+        <li><strong>Meta Platforms (WhatsApp)</strong> — mensajería, cuando me escribes por WhatsApp.</li>
+        <li><strong>GitHub, Inc. (GitHub Pages)</strong> — alojamiento de este sitio web.</li>
+        <li><strong>Google Fonts</strong> — carga de las tipografías del sitio.</li>
+        <li><strong>Plataformas de videollamada</strong> (por ejemplo Zoom o Google Meet) — imparticion de las clases.</li>
+      </ul>
+      <p>Algunos de estos proveedores pueden tratar datos fuera del Espacio Económico Europeo, amparándose en garantías adecuadas como las cláusulas contractuales tipo o el Marco de Privacidad de Datos UE-EE. UU. No se ceden datos a otros terceros salvo obligación legal.</p>
+
+      <h2>5. Cuánto tiempo conservamos los datos</h2>
+      <p>Conservamos tus datos durante el tiempo necesario para atender tu solicitud y, si contratas, mientras dure la relación y durante los plazos legales aplicables (por ejemplo, fiscales y mercantiles). Pasado ese tiempo, se eliminan o se bloquean de forma segura.</p>
+
+      <h2>6. Tus derechos</h2>
+      <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a>, indicando el derecho que quieres ejercer. Si consideras que tus datos no se tratan correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+      <h2>7. Cookies y almacenamiento local</h2>
+      <p>Este sitio no utiliza cookies publicitarias ni de análisis. Solo guarda en tu navegador, mediante almacenamiento local, tu preferencia de modo claro u oscuro, que es técnica y necesaria para recordar tu elección. Al cargar las tipografías desde Google Fonts, Google puede recibir tu dirección IP. Las páginas de pago de Stripe se rigen por su propia política de cookies.</p>
+
+      <h2>8. Menores</h2>
+      <p>Las clases pueden estar dirigidas a menores. Los datos de un menor de 14 años deben ser facilitados por su madre, padre o tutor legal, que declara tener la autoridad para hacerlo.</p>
+
+      <h2>9. Cambios en esta política</h2>
+      <p>Esta política puede actualizarse para reflejar cambios legales o del servicio. La fecha de la última actualización figura al inicio de esta página.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo">
+        <img data-img="logo" alt="" class="logo__icon-img" width="35" height="56">
+        <span>CHESSTER</span>
+      </span>
+      <p>Clases de ajedrez online para niños, adolescentes y personas mayores.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#clases">Clases</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 CHESSTER. Todos los derechos reservados. · <a href="aviso-legal.html" style="text-decoration:underline">Aviso legal y condiciones</a> · <a href="privacidad.html" style="text-decoration:underline">Privacidad</a></p>
+  </div>
+</footer>
+
+<script src="js/img-logo.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function (el) { el.src = window.IMG[el.dataset.img]; });
+document.getElementById('themeToggle').addEventListener('click', function () {
+  var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
+</script>
+</body>
+</html>

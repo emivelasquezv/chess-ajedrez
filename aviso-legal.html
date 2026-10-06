@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<title>Aviso legal y condiciones — CHESSTER</title>
+<meta name="description" content="Aviso legal y condiciones de contratación de las clases de ajedrez online de CHESSTER.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geomini:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/png" href="assets/logo-dog-head.png">
+<style>
+.legal { padding: 70px 0 90px; }
+.legal__inner { max-width: 760px; margin: 0 auto; }
+.legal h1 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; }
+.legal h2 { text-align: left; font-size: 21px; margin: 36px 0 10px; }
+.legal p, .legal li { color: var(--text-muted); font-size: 15.5px; line-height: 1.7; }
+.legal ul { padding-left: 22px; margin: 0 0 12px; }
+.legal a { color: var(--accent); text-decoration: underline; }
+.legal__date { font-size: 14px; margin-bottom: 28px; }
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <img data-img="logo" alt="" class="logo__icon-img" width="35" height="56">
+      <span>CHESSTER</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+      <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6" y2="6"/>
+          <line x1="18" y1="18" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+      <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="legal">
+    <div class="container legal__inner">
+      <h1>Aviso legal y condiciones</h1>
+      <p class="legal__date">Última actualización: 6 de octubre de 2026</p>
+
+      <h2>1. Datos identificativos</h2>
+      <p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que este sitio web, CHESSTER, es titularidad de:</p>
+      <ul>
+        <li><strong>Titular:</strong> Emilia Velásquez Vera</li>
+        <li><strong>NIE:</strong> Z3345005M</li>
+        <li><strong>Localidad:</strong> Valencia (España)</li>
+        <li><strong>Correo electrónico:</strong> <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a></li>
+        <li><strong>Sitio web:</strong> <a href="index.html">CHESSTER – Clases de ajedrez online</a></li>
+      </ul>
+
+      <h2>2. Objeto y uso del sitio</h2>
+      <p>Este sitio presenta y permite contratar clases de ajedrez online, individuales y grupales, para niños, adolescentes y personas mayores. El acceso y uso del sitio es libre y gratuito, y atribuye la condición de usuario, que se compromete a utilizarlo conforme a la ley, la buena fe y el orden público, y a no emplearlo con fines ilícitos o que puedan dañar el sitio o a terceros.</p>
+
+      <h2>3. Propiedad intelectual</h2>
+      <p>Los textos, imágenes, logotipos, la marca CHESSTER, la mascota y el diseño del sitio pertenecen a su titular o se usan con la debida autorización. Queda prohibida su reproducción, distribución o transformación sin permiso expreso, salvo para uso personal.</p>
+
+      <h2>4. Servicios y contratación</h2>
+      <p>Los servicios disponibles son clases de ajedrez online por videollamada, con las modalidades, duraciones (45, 60 o 90 minutos) y precios indicados en la sección «Precios» del sitio. Los precios se expresan en euros.</p>
+      <p>La contratación se realiza a través de los enlaces de pago de la web. Una vez completado el pago, la persona contratante recibe la confirmación y se pone en contacto por WhatsApp o correo electrónico para acordar el horario de la primera clase.</p>
+
+      <h2>5. Pago</h2>
+      <p>Los pagos se procesan a través de Stripe, que gestiona de forma segura los datos de la tarjeta u otros medios de pago. El titular de este sitio no tiene acceso ni almacena los datos completos de tu tarjeta.</p>
+
+      <h2>6. Bono de 4 clases (suscripción mensual)</h2>
+      <p>El «Bono de 4 clases» es una suscripción mensual que se renueva automáticamente cada mes hasta que se cancele. Puedes solicitar la cancelación escribiendo por correo electrónico o WhatsApp antes de la fecha de la siguiente renovación; la cancelación será efectiva al terminar el periodo ya pagado.</p>
+
+      <h2>7. Cambios y cancelaciones de clases</h2>
+      <p>Los cambios de horario y las cancelaciones de clases individuales o grupales se coordinan por WhatsApp o correo electrónico con antelación razonable.</p>
+
+      <h2>8. Derecho de desistimiento (consumidores)</h2>
+      <p>Si eres consumidor o usuario, tienes derecho a desistir del contrato en un plazo de 14 días naturales desde su celebración, sin necesidad de justificación, comunicándolo de forma clara por correo electrónico a la dirección indicada en el apartado 1.</p>
+      <p>Si solicitas expresamente que las clases comiencen dentro de ese plazo, deberás abonar la parte proporcional de los servicios ya prestados hasta el momento en que comuniques el desistimiento. Una vez que el servicio se haya prestado por completo con tu consentimiento expreso y conocimiento de que pierdes el derecho de desistimiento, este derecho se extingue.</p>
+
+      <h2>9. Menores de edad</h2>
+      <p>Las clases para menores deben ser contratadas por su madre, padre o tutor legal, quien autoriza su participación en las videollamadas y es responsable de que el menor esté acompañado o supervisado en la medida que corresponda.</p>
+
+      <h2>10. Responsabilidad</h2>
+      <p>El titular no se responsabiliza de interrupciones del sitio o de los servicios de terceros (conexión a internet, plataformas de videollamada, pasarela de pago) ajenas a su control. El sitio puede contener enlaces a páginas de terceros, sobre cuyo contenido no tiene responsabilidad.</p>
+
+      <h2>11. Protección de datos</h2>
+      <p>El tratamiento de tus datos personales se describe en la <a href="privacidad.html">Política de privacidad</a>.</p>
+
+      <h2>12. Legislación aplicable y resolución de conflictos</h2>
+      <p>Este aviso se rige por la legislación española. Para cualquier controversia, los consumidores pueden acudir a los juzgados y tribunales de su domicilio. También puedes utilizar la plataforma europea de resolución de litigios en línea: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo">
+        <img data-img="logo" alt="" class="logo__icon-img" width="35" height="56">
+        <span>CHESSTER</span>
+      </span>
+      <p>Clases de ajedrez online para niños, adolescentes y personas mayores.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#clases">Clases</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="mailto:emivelasquezv@gmail.com">emivelasquezv@gmail.com</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 CHESSTER. Todos los derechos reservados. · <a href="aviso-legal.html" style="text-decoration:underline">Aviso legal y condiciones</a> · <a href="privacidad.html" style="text-decoration:underline">Privacidad</a></p>
+  </div>
+</footer>
+
+<script src="js/img-logo.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function (el) { el.src = window.IMG[el.dataset.img]; });
+document.getElementById('themeToggle').addEventListener('click', function () {
+  var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
+</script>
+</body>
+</html>
